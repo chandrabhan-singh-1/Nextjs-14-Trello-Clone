@@ -6,8 +6,6 @@ import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 import { createSafeAction } from "@/lib/create-safe-action";
 import { StripeRedirect } from "./schema";
-import { createAuditLog } from "@/lib/create-audit-log";
-import { ACTION, ENTITY_TYPE } from "@prisma/client";
 import { absoluteUrl } from "@/lib/utils";
 import { stripe } from "@/lib/stripe";
 
@@ -46,7 +44,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
         payment_method_types: ["card"],
         mode: "subscription",
         billing_address_collection: "auto",
-        customer_email: user?.emailAddresses[0].emailAddress,
+        customer_email: user.emailAddresses[0].emailAddress,
         line_items: [
           {
             price_data: {
@@ -71,6 +69,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
       url = stripeSession.url || "";
     }
   } catch (error) {
+    console.log("STRIPE SERVER ACTION ERROR: ", error);
     return { error: "Something went wrong!" };
   }
 

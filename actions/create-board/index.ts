@@ -21,7 +21,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   }
 
   const canCreate = await hasAvailableCount();
-  const isPro = checkSubscription();
+  const isPro = await checkSubscription();
 
   if (!canCreate && !isPro) {
     return {

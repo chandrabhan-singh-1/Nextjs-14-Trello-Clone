@@ -29,6 +29,8 @@ export const incrementAvailableCount = async () => {
       },
     });
   }
+
+  return;
 };
 
 export const decrementAvailableCount = async () => {
@@ -57,6 +59,8 @@ export const decrementAvailableCount = async () => {
       },
     });
   }
+
+  return;
 };
 
 export const hasAvailableCount = async () => {
