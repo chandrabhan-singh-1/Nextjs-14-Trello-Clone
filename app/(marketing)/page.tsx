@@ -1,8 +1,8 @@
-import { Merriweather, Poppins } from "next/font/google";
 import { MedalIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { merriweather, poppins } from "./layout";
 
 const MarketingPage = () => {
   return (
@@ -50,14 +50,3 @@ const MarketingPage = () => {
 };
 
 export default MarketingPage;
-
-export const merriweather = Merriweather({
-  subsets: ["latin"],
-  display: "auto",
-  weight: ["300", "400", "700", "900"],
-});
-
-export const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});

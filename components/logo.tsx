@@ -1,4 +1,4 @@
-import { merriweather } from "@/app/(marketing)/page";
+import { merriweather } from "@/app/(marketing)/layout";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
