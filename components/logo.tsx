@@ -1,7 +1,13 @@
-import { merriweather } from "@/app/(marketing)/layout";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { Merriweather } from "next/font/google";
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  display: "auto",
+  weight: ["300", "400", "700", "900"],
+});
 
 export const Logo = () => {
   return (
