@@ -45,9 +45,9 @@ const MarketingPage = () => {
             poppins.className
           )}
         >
-          "Experience seamless project management with TASKIFY. Streamline
+          &quot;Experience seamless project management with TASKIFY. Streamline
           tasks, collaborate effortlessly, and boost productivity. Your
-          projects, simplified and organized, all in one place."
+          projects, simplified and organized, all in one place.&quot;
         </div>
         <Button
           variant={"default"}
