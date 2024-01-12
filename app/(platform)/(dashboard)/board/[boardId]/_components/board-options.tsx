@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/popover";
 import { useAction } from "@/hooks/use-action";
 import { MoreHorizontal, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 interface BoardOptionsProps {
@@ -17,9 +18,15 @@ interface BoardOptionsProps {
 }
 
 export const BoardOptions = ({ id }: BoardOptionsProps) => {
+  const router = useRouter();
   const { execute, isLoading } = useAction(deleteBoard, {
     onError: (error) => {
       toast.error(error);
+      router.push("/");
+    },
+    onSuccess: (data) => {
+      toast.success(`Board "${data.title}" deleted!`);
+      router.push("/");
     },
   });
 

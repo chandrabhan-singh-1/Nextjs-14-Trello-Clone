@@ -8,7 +8,7 @@ import { createSafeAction } from "@/lib/create-safe-action";
 import { DeleteBoard } from "./schema";
 import { redirect } from "next/navigation";
 import { createAuditLog } from "@/lib/create-audit-log";
-import { ACTION, ENTITY_TYPE } from "@prisma/client";
+import { ACTION, Board, ENTITY_TYPE } from "@prisma/client";
 import { decrementAvailableCount } from "@/lib/org-limit";
 import { checkSubscription } from "@/lib/subscription";
 
@@ -25,7 +25,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
   const isPro = await checkSubscription();
 
-  let board;
+  let board: Board;
 
   try {
     board = await db.board.delete({
@@ -52,7 +52,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   }
 
   revalidatePath(`/organization/${orgId}`);
-  redirect(`/organization/${orgId}`);
+  return { data: board };
 };
 
 export const deleteBoard = createSafeAction(DeleteBoard, handler);
