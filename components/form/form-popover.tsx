@@ -18,6 +18,7 @@ import { FormPicker } from "./form-picker";
 import { ElementRef, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useProModal } from "@/hooks/use-pro-modal";
+import { useMediaQuery } from "usehooks-ts";
 
 interface FormPopoverProps {
   children: React.ReactNode;
@@ -35,6 +36,7 @@ export const FormPopover = ({
   const proModal = useProModal();
   const closeRef = useRef<ElementRef<"button">>(null);
   const router = useRouter();
+  const isMobile = useMediaQuery("(max-width:768px)");
 
   const [mounted, setMounted] = useState(false);
 
@@ -69,8 +71,8 @@ export const FormPopover = ({
       <PopoverTrigger>{children}</PopoverTrigger>
       <PopoverContent
         align={align}
-        className="w-80 pt-3 "
-        side={side}
+        className="w-full md:w-80 pt-3"
+        side={isMobile ? "bottom" : side}
         sideOffset={sideOffset}
       >
         <div className="text-sm font-medium text-center text-neutral-600 pb-4">
