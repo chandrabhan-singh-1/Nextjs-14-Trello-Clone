@@ -2,7 +2,6 @@
 
 ![image](https://github.com/AntonioErdeljac/next13-trello/assets/23248726/fd260249-82fa-4588-a67a-69bb4eb09067)
 
-<<<<<<< HEAD
 This is a repository for Fullstack Trello Clone: Next.js 14, Server Actions, React, Prisma, Stripe, Tailwind, MySQL
 
 Key Features:
@@ -14,7 +13,6 @@ This is a repository for Fullstack Trello Clone: Next.js 14, Server Actions, Rea
 Key Features:
 
 - Auth
-  > > > > > > > 31625d054453fb8272d558f641d71ba850a8dcad
 - Organizations / Workspaces
 - Board creation
 - Unsplash API for random beautiful cover images
@@ -49,8 +47,6 @@ npm i
 ```
 
 ### Setup .env file
-
-<<<<<<< HEAD
 
 ```js
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
@@ -93,8 +89,6 @@ NEXT_PUBLIC_APP_URL=
 STRIPE_WEBHOOK_SECRET=
 ```
 
-> > > > > > > 31625d054453fb8272d558f641d71ba850a8dcad
-
 ### Setup Prisma
 
 Add MySQL Database (I used PlanetScale)
@@ -115,10 +109,10 @@ npm run dev
 
 Running commands with npm `npm run [command]`
 
-<<<<<<< HEAD
-| command | description |
+| command | description                              |
 | :------ | :--------------------------------------- |
-| `dev` | Starts a development instance of the app |
+| `dev`   | Starts a development instance of the app |
+
 =======
 | command | description |
 | :-------------- | :--------------------------------------- |
