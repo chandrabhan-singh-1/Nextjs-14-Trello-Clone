@@ -1,6 +1,6 @@
 # Fullstack Trello Clone: Next.js 14, Server Actions, React, Prisma, Stripe, Tailwind, MySQL
 
-![image](https://github.com/chandrabhan-singh-1/shared-assets/blob/main/Images/taskify-thumbnail.jpg)
+![image](https://github.com/chandrabhan-singh-1/shared-assets/blob/main/Images/taskify/taskify-thumbnail.jpg)
 
 This is a repository for Fullstack Trello Clone: Next.js 14, Server Actions, React, Prisma, Stripe, Tailwind, MySQL
 
