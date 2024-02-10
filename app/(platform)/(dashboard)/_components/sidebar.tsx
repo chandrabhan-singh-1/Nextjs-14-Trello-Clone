@@ -66,17 +66,17 @@ export const Sidebar = ({ storageKey = "t-sidebar-state" }: SidebarProps) => {
 
   return (
     <>
-      <div className="font-medium text-xs flex items-center mb-1">
+      <div className="font-medium text-xs flex items-center mb-3 rounded-lg text-white hover:bg-muted hover:text-black">
         <span className="pl-4">Workspaces</span>
         <Button
           asChild
           type="button"
           size={"icon"}
           variant={"ghost"}
-          className="ml-auto"
+          className="group w-full flex justify-end pr-2"
         >
-          <Link href={"/select-org"}>
-            <Plus className="h-4 w-4" />
+          <Link href={"/select-org"} className="w-full">
+            <Plus className="h-4 w-4 group-hover:scale-125 group-hover:text-emerald-500" />
           </Link>
         </Button>
       </div>

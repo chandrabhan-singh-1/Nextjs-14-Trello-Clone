@@ -21,7 +21,7 @@ export const ActivityList = async () => {
   });
 
   return (
-    <ol className="space-y-4 mt-4 ">
+    <ol className="space-y-4 mt-2 bg-muted p-2 rounded-lg max-h-[70vh] overflow-y-auto">
       <p className="hidden last:block text-xs text-center text-muted-foreground">
         No activity found inside this organization.
       </p>
@@ -34,7 +34,7 @@ export const ActivityList = async () => {
 
 ActivityList.Skeleton = function ActivityListSkeleton() {
   return (
-    <ol className="space-y-4 mt-4">
+    <ol className="space-y-4 mt-4 ">
       <Skeleton className="w-[80%] h-14" />
       <Skeleton className="w-[50%] h-14" />
       <Skeleton className="w-[70%] h-14" />

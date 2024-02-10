@@ -6,9 +6,17 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-full">
+    <div className="h-full w-full">
       <Navbar />
-      {children}
+      <div
+        className="h-full w-full bg-cover bg-center overflow-y-auto"
+        style={{
+          backgroundImage: "url('/bg.jpg')",
+          backgroundAttachment: "sticky",
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 }

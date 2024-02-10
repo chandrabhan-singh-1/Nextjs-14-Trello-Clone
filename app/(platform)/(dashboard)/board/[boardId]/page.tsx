@@ -39,7 +39,7 @@ const BoardIdPage = async ({ params }: BoardIdPageProps) => {
 
   return (
     <div className="p-5 h-full space-y-2 overflow-x-auto">
-      <SwipeToast />
+      {/* <SwipeToast /> */}
       <ListContainer boardId={params.boardId} data={lists} />
     </div>
   );

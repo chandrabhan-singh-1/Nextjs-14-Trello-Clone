@@ -9,7 +9,7 @@ export const Navbar = () => {
   return (
     <nav className="h-14 w-full pr-2 md:px-4 flex items-center shadow-md border-b fixed top-0 z-50 bg-white">
       <MobileSidebar />
-      <div className="flex items-center gap-x-4">
+      <div className="flex items-center gap-x-1 sm:gap-x-4">
         <div className="hidden md:flex">
           <Logo />
         </div>
@@ -17,7 +17,7 @@ export const Navbar = () => {
           <Button
             size={"sm"}
             variant={"primary"}
-            className="rounded-sm hidden md:block h-auto py-1.5 px-2"
+            className="rounded-sm hidden md:block h-auto py-1.5 px-0.5 sm:px-2"
           >
             Create
           </Button>

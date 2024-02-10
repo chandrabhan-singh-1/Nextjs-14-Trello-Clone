@@ -4,6 +4,7 @@ const SettingsPage = () => {
   return (
     <div className="w-full">
       <OrganizationProfile
+        afterLeaveOrganizationUrl="/"
         appearance={{
           elements: {
             rootBox: {
